@@ -1,0 +1,33 @@
+{
+    "properties": {
+        "roleName": "Custom Virtual Machine Operator",
+        "description": "Custom role that provides read access to all resources, VM power management, and auto-shutdown management capabilities",
+        "assignableScopes": [
+            "/subscriptions/{subscriptionId1}",
+            "/providers/Microsoft.Management/managementGroups/{managementGroupId1}"
+        ],
+        "permissions": [
+            {
+                "actions": [
+                    "*/read",
+                    "Microsoft.Compute/virtualMachines/start/action",
+                    "Microsoft.Compute/virtualMachines/powerOff/action",
+                    "Microsoft.Compute/virtualMachines/restart/action",
+                    "Microsoft.Compute/virtualMachines/deallocate/action",
+                    "Microsoft.Compute/virtualMachines/redeploy/action",
+                    "Microsoft.DevTestLab/schedules/read",
+                    "Microsoft.DevTestLab/schedules/write",
+                    "Microsoft.DevTestLab/schedules/delete",
+                    "Microsoft.DevTestLab/schedules/execute/action",
+                    "Microsoft.Resources/subscriptions/resourceGroups/read",
+                    "Microsoft.Resources/deployments/read",
+                    "Microsoft.Authorization/*/read",
+                    "Microsoft.Compute/virtualMachines/write"
+                ],
+                "notActions": [],
+                "dataActions": [],
+                "notDataActions": []
+            }
+        ]
+    }
+}
